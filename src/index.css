@@ -2,41 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* RedX Design System - Adventure & Social Service Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors */
+    --background: 0 0% 0%;          /* Pure black background */
+    --foreground: 0 0% 100%;        /* Pure white text */
+    --card: 0 0% 5%;                /* Dark card background */
+    --card-foreground: 0 0% 100%;   /* White card text */
+    
+    /* RedX Brand Red */
+    --primary: 0 100% 50%;          /* Bright red for logos/highlights */
+    --primary-foreground: 0 0% 100%; /* White on red */
+    --accent: 0 85% 45%;            /* Darker red for accents */
+    --accent-foreground: 0 0% 100%; /* White on accent red */
+    
+    /* UI Elements */
+    --secondary: 0 0% 15%;          /* Dark gray for secondary elements */
+    --secondary-foreground: 0 0% 90%; /* Light gray text */
+    --muted: 0 0% 10%;              /* Very dark gray */
+    --muted-foreground: 0 0% 70%;   /* Muted text */
+    
+    /* Interactive Elements */
+    --border: 0 0% 20%;             /* Dark borders */
+    --input: 0 0% 10%;              /* Input backgrounds */
+    --ring: 0 100% 50%;             /* Red focus ring */
+    
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Adventure Theme Gradients */
+    --gradient-adventure: linear-gradient(135deg, hsl(0 100% 50%), hsl(15 100% 45%));
+    --gradient-mountain: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 5%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 100% 10%) 100%);
+    
+    /* Shadows & Effects */
+    --shadow-red-glow: 0 0 30px hsl(0 100% 50% / 0.3);
+    --shadow-elevation: 0 10px 30px hsl(0 0% 0% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +110,104 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* RedX Logo Animation */
+  .logo-entrance {
+    animation: logoEntrance 2s ease-out forwards;
+  }
+  
+  .content-reveal {
+    animation: contentReveal 1.5s ease-out 2s forwards;
+    opacity: 0;
+  }
+  
+  /* Adventure Theme Components */
+  .adventure-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300;
+    @apply hover:shadow-[var(--shadow-elevation)] hover:border-primary/30;
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .mountain-gradient {
+    background: var(--gradient-mountain);
+  }
+  
+  .adventure-gradient {
+    background: var(--gradient-adventure);
+  }
+  
+  .red-glow {
+    box-shadow: var(--shadow-red-glow);
+  }
+  
+  /* Typography Variants */
+  .heading-adventure {
+    @apply text-primary font-bold tracking-wide;
+    text-shadow: 0 0 20px hsl(0 100% 50% / 0.3);
+  }
+  
+  .text-adventure {
+    @apply text-foreground leading-relaxed;
+  }
+  
+  /* Button Variants */
+  .btn-adventure {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-red-glow)];
+  }
+  
+  .btn-outline-adventure {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes logoEntrance {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes contentReveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes mountainExpand {
+    from {
+      clip-path: polygon(50% 100%, 50% 100%, 50% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  
+  .mountain-expand {
+    animation: mountainExpand 1.5s ease-out 1s forwards;
+    clip-path: polygon(50% 100%, 50% 100%, 50% 100%);
   }
 }

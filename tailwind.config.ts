@@ -18,6 +18,12 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'orbitron': ['Orbitron', 'monospace'],    // Futuristic headings
+				'bebas': ['Bebas Neue', 'cursive'],       // Bold impact text
+				'oswald': ['Oswald', 'sans-serif'],       // Strong readable text
+				'roboto': ['Roboto', 'sans-serif'],       // Clean body text
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

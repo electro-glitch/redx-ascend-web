@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useEffect } from "react";
+import LandingAnimation from "../components/LandingAnimation";
+import Navigation from "../components/Navigation";
+import Hero from "../components/Hero";
+import AboutSection from "../components/AboutSection";
 
 const Index = () => {
+  const [showAnimation, setShowAnimation] = useState(true);
+
+  useEffect(() => {
+    // Check if user has seen the animation before (in this session)
+    const hasSeenAnimation = sessionStorage.getItem('redx-animation-seen');
+    if (hasSeenAnimation) {
+      setShowAnimation(false);
+    }
+  }, []);
+
+  const handleAnimationComplete = () => {
+    setShowAnimation(false);
+    sessionStorage.setItem('redx-animation-seen', 'true');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {showAnimation && (
+        <LandingAnimation onAnimationComplete={handleAnimationComplete} />
+      )}
+      
+      <Navigation />
+      <Hero />
+      <AboutSection />
     </div>
   );
 };
