@@ -4,13 +4,13 @@ import Navigation from "../components/Navigation";
 const Partners = () => {
   const partners = [
     {
-      name: "Mountain View Cafe",
+      name: "Vito's",
       category: "Restaurant",
       icon: <Coffee className="w-6 h-6" />,
-      description: "Premium coffee and hearty meals for adventurers. Special discounts for RedX members.",
-      location: "Hill Station Road, Mumbai",
-      website: "https://mountainviewcafe.com",
-      offer: "20% off on all meals"
+      description: "Premium pizzas, pastas, Italian, pastries and desserts",
+      location: "Near Canara Mall, Manipal",
+      website: "https://www.zomato.com/manipal/vitos-pizzeria-cafe-tiger-circle",
+      offer: "10% off on all meals"
     },
     {
       name: "Elite Gaming Arena", 
