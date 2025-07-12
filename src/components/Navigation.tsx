@@ -10,6 +10,7 @@ const Navigation = () => {
     { path: "/", label: "Home" },
     { path: "/team", label: "Team" },
     { path: "/events", label: "Events" },
+    { path: "/partners", label: "Partners" },
     { path: "/donate", label: "Donate" },
   ];
 
@@ -33,7 +34,7 @@ const Navigation = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-oswald font-medium transition-all duration-300 ${
+                  className={`font-inter font-medium transition-all duration-300 ${
                     location.pathname === item.path
                       ? "text-primary border-b-2 border-primary"
                       : "text-foreground hover:text-primary hover:scale-105"
@@ -64,7 +65,7 @@ const Navigation = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`block px-3 py-2 font-oswald font-medium transition-all duration-300 ${
+                  className={`block px-3 py-2 font-inter font-medium transition-all duration-300 ${
                     location.pathname === item.path
                       ? "text-primary bg-primary/10"
                       : "text-foreground hover:text-primary hover:bg-primary/5"

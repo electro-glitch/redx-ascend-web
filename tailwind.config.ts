@@ -19,10 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'orbitron': ['Orbitron', 'monospace'],    // Futuristic headings
-				'bebas': ['Bebas Neue', 'cursive'],       // Bold impact text
-				'oswald': ['Oswald', 'sans-serif'],       // Strong readable text
+				'inter': ['Inter', 'sans-serif'],         // Modern clean font
 				'roboto': ['Roboto', 'sans-serif'],       // Clean body text
+				'sans': ['Inter', 'sans-serif'],          // Default sans
 			},
 			colors: {
 				border: 'hsl(var(--border))',
