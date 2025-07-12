@@ -1,4 +1,4 @@
-import { Store, Coffee, Gamepad2, Cake, MapPin, ExternalLink, Star, Dumbell } from "lucide-react";
+import { Store, Coffee, Gamepad2, Cake, MapPin, ExternalLink, Star, Dumbbell } from "lucide-react";
 import Navigation from "../components/Navigation";
 
 const Partners = () => {
