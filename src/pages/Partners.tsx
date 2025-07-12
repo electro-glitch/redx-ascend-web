@@ -1,4 +1,4 @@
-import { Store, Coffee, Gamepad2, Cake, MapPin, ExternalLink, Star } from "lucide-react";
+import { Store, Coffee, Gamepad2, Cake, MapPin, ExternalLink, Star, Dumbell } from "lucide-react";
 import Navigation from "../components/Navigation";
 
 const Partners = () => {
@@ -13,49 +13,40 @@ const Partners = () => {
       offer: "10% off on all meals"
     },
     {
-      name: "Elite Gaming Arena", 
+      name: "Glitch", 
       category: "Game Parlor",
       icon: <Gamepad2 className="w-6 h-6" />,
       description: "State-of-the-art gaming facility with latest consoles and PC setups.",
-      location: "Tech Park, Pune",
-      website: "https://elitegaming.com",
-      offer: "Free gaming hours for events"
+      location: "Eshwar Nagar",
+      website: "https://www.instagram.com/glitch_manipal/?hl=en",
+      offer: "10% off group bookings"
     },
     {
-      name: "Glow Beauty Salon",
+      name: "Toni and Guy",
       category: "Salon",
       icon: <Star className="w-6 h-6" />,
       description: "Professional grooming and beauty services for special occasions.",
-      location: "Fashion Street, Mumbai",
-      website: "https://glowbeauty.com",
-      offer: "30% off on packages"
+      location: "Eshwar Nagar",
+      website: "https://toniandguyindia.com/",
+      offer: "20% off on packages"
     },
     {
-      name: "Sweet Dreams Bakery",
+      name: "Polar Bear",
       category: "Desserts",
       icon: <Cake className="w-6 h-6" />,
-      description: "Custom cakes and desserts for celebrations and events.",
-      location: "Central Plaza, Delhi",
-      website: "https://sweetdreams.com",
-      offer: "Free delivery for bulk orders"
+      description: "Ice creams for every mood.",
+      location: "Eshwar Nagar",
+      website: "https://polarbear.co.in/",
+      offer: "10% off all orders"
     },
     {
-      name: "The Hungry Lion",
-      category: "Restaurant", 
-      icon: <Coffee className="w-6 h-6" />,
-      description: "Multi-cuisine restaurant with outdoor seating perfect for team gatherings.",
-      location: "Marina Beach, Chennai",
-      website: "https://hungrylion.com",
-      offer: "Group booking discounts"
-    },
-    {
-      name: "VR Zone",
-      category: "Game Parlor",
-      icon: <Gamepad2 className="w-6 h-6" />,
-      description: "Virtual reality gaming experience with adventure and team-building games.",
-      location: "Cyber City, Gurgaon",
-      website: "https://vrzone.com", 
-      offer: "Special rates for clubs"
+      name: "eXtreme fitness",
+      category: "Gym", 
+      icon: <Dumbbell className="w-5 h-5 text-red-500" />,
+      description: "State of the art gym",
+      location: "Eshwar Nagar",
+      website: "https://www.instagram.com/extreme_fitness__/",
+      offer: "20% off on yearly membership"
     }
   ];
 
@@ -145,6 +136,10 @@ const Partners = () => {
               <div className="flex items-center gap-2 adventure-card px-4 py-2">
                 <Cake className="w-5 h-5 text-yellow-400" />
                 <span className="font-inter text-yellow-400 font-medium tracking-wider">DESSERTS</span>
+              </div>
+              <div className="flex items-center gap-2 adventure-card px-4 py-2">
+                <Dumbbell className="w-5 h-5 text-red-500" />
+                <span className="font-inter text-red-500 font-medium tracking-wider">GYM</span>
               </div>
             </div>
           </div>
