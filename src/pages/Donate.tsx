@@ -5,7 +5,7 @@ const Donate = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Page Header */}
@@ -24,7 +24,7 @@ const Donate = () => {
               <h2 className="font-inter text-3xl text-primary mb-8 font-bold tracking-wider">
                 WHY YOUR SUPPORT MATTERS
               </h2>
-              
+
               <div className="space-y-6">
                 <div className="adventure-card">
                   <div className="flex items-start gap-4">
@@ -36,7 +36,6 @@ const Donate = () => {
                       </p>
                     </div>
                   </div>
-                </div>
                 </div>
 
                 <div className="adventure-card">
@@ -75,8 +74,8 @@ const Donate = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              
             {/* Right Column - Donation Portal */}
             <div>
               <div className="adventure-card sticky top-24">
@@ -91,22 +90,17 @@ const Donate = () => {
 
                 {/* Donation Amount Options */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="border border-primary/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
-                    <div className="font-inter text-xl font-bold text-primary">₹500</div>
-                    <div className="font-inter text-xs text-foreground/70">Basic Support</div>
-                  </div>
-                  <div className="border border-primary/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
-                    <div className="font-inter text-xl font-bold text-primary">₹1,000</div>
-                    <div className="font-inter text-xs text-foreground/70">Supporter</div>
-                  </div>
-                  <div className="border border-primary/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
-                    <div className="font-inter text-xl font-bold text-primary">₹2,500</div>
-                    <div className="font-inter text-xs text-foreground/70">Advocate</div>
-                  </div>
-                  <div className="border border-primary/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
-                    <div className="font-inter text-xl font-bold text-primary">₹5,000</div>
-                    <div className="font-inter text-xs text-foreground/70">Champion</div>
-                  </div>
+                  {[
+                    { amount: "₹500", label: "Basic Support" },
+                    { amount: "₹1,000", label: "Supporter" },
+                    { amount: "₹2,500", label: "Advocate" },
+                    { amount: "₹5,000", label: "Champion" }
+                  ].map(({ amount, label }, idx) => (
+                    <div key={idx} className="border border-primary/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
+                      <div className="font-inter text-xl font-bold text-primary">{amount}</div>
+                      <div className="font-inter text-xs text-foreground/70">{label}</div>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Ketto Donation Button */}
