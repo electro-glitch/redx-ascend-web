@@ -101,18 +101,12 @@ const Donate = () => {
               <p className="font-inter text-foreground/80 mb-6">
                 Want to know more about how we use funds or how you can get involved? Feel free to reach out—we’d love to hear from you!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <a
                   href="mailto:redx.mit@manipal.edu"
                   className="btn-outline-adventure"
                 >
                   Email Finance Team
-                </a>
-                <a
-                  href="tel:+919876543210"
-                  className="btn-outline-adventure"
-                >
-                  Call: +91 98765 43210
                 </a>
               </div>
             </div>
