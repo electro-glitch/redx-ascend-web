@@ -6,7 +6,7 @@ const Donate = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="pt-24 pb-32"> {/* Increased bottom padding to prevent clipping */}
+      <div className="pt-24 pb-32">
         <div className="container mx-auto px-4">
           {/* Page Header */}
           <div className="text-center mb-16">
@@ -26,23 +26,28 @@ const Donate = () => {
               </h2>
 
               <div className="space-y-6">
-                {[{
-                  icon: <Heart className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
-                  title: "Teaching Underprivileged Children",
-                  desc: "Our volunteers conduct regular teaching sessions for children from underserved communities, helping bridge educational gaps."
-                }, {
-                  icon: <Target className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
-                  title: "Clean-Up Drives",
-                  desc: "We organize clean-up campaigns in public spaces, raising awareness about sanitation and environmental responsibility."
-                }, {
-                  icon: <Users className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
-                  title: "Tree Plantations",
-                  desc: "From campuses to local parks, we conduct plantation drives that promote sustainability and community engagement."
-                }, {
-                  icon: <Zap className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
-                  title: "Trek-Based Campaigns",
-                  desc: "We combine our love for adventure with purpose—organizing treks that raise awareness for social and environmental causes."
-                }].map(({ icon, title, desc }, i) => (
+                {[
+                  {
+                    icon: <Heart className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
+                    title: "Teaching Underprivileged Children",
+                    desc: "Our volunteers conduct regular teaching sessions for children from underserved communities, helping bridge educational gaps."
+                  },
+                  {
+                    icon: <Target className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
+                    title: "Clean-Up Drives",
+                    desc: "We organize clean-up campaigns in public spaces, raising awareness about sanitation and environmental responsibility."
+                  },
+                  {
+                    icon: <Users className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
+                    title: "Tree Plantations",
+                    desc: "From campuses to local parks, we conduct plantation drives that promote sustainability and community engagement."
+                  },
+                  {
+                    icon: <Zap className="w-8 h-8 text-primary flex-shrink-0 mt-1" />,
+                    title: "Trek-Based Campaigns",
+                    desc: "We combine our love for adventure with purpose—organizing treks that raise awareness for social and environmental causes."
+                  }
+                ].map(({ icon, title, desc }, i) => (
                   <div key={i} className="adventure-card">
                     <div className="flex items-start gap-4">
                       {icon}
@@ -97,8 +102,18 @@ const Donate = () => {
                 Want to know more about how we use funds or how you can get involved? Feel free to reach out—we’d love to hear from you!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:	redx.mit@manipal.edu" className="btn-outline-adventure">
+                <a
+                  href="mailto:redx.mit@manipal.edu"
+                  className="btn-outline-adventure"
+                >
                   Email Finance Team
+                </a>
+                <a
+                  href="tel:+919876543210"
+                  className="btn-outline-adventure"
+                >
+                  Call: +91 98765 43210
+                </a>
               </div>
             </div>
           </div>
