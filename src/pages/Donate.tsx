@@ -1,4 +1,4 @@
-import { Heart, ExternalLink, Target, Users, Zap, Shield } from "lucide-react";
+import { Heart, ExternalLink, Target, Users, Zap } from "lucide-react";
 import Navigation from "../components/Navigation";
 
 const Donate = () => {
@@ -14,7 +14,7 @@ const Donate = () => {
               SUPPORT OUR SOCIAL MISSION
             </h1>
             <p className="font-inter text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              Your contribution directly impacts vulnerable communities. Every donation helps us provide education, healthcare, and essential services to those who need it most.
+              Your contribution helps us create real, grassroots-level change. From educating children to organizing cleanups, every bit of support fuels our mission.
             </p>
           </div>
 
@@ -30,9 +30,9 @@ const Donate = () => {
                   <div className="flex items-start gap-4">
                     <Heart className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Healthcare & Nutrition</h3>
+                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Teaching Underprivileged Children</h3>
                       <p className="font-inter text-foreground/80 text-sm leading-relaxed">
-                        Medical camps, nutrition programs, and health awareness initiatives that directly save lives and improve community wellbeing.
+                        Our volunteers conduct regular teaching sessions for children from underserved communities, helping bridge educational gaps.
                       </p>
                     </div>
                   </div>
@@ -42,9 +42,9 @@ const Donate = () => {
                   <div className="flex items-start gap-4">
                     <Target className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Education & Literacy</h3>
+                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Clean-Up Drives</h3>
                       <p className="font-inter text-foreground/80 text-sm leading-relaxed">
-                        Building schools, providing educational materials, and running literacy programs for children and adults in underserved communities.
+                        We organize clean-up campaigns in public spaces, raising awareness about sanitation and environmental responsibility.
                       </p>
                     </div>
                   </div>
@@ -54,9 +54,9 @@ const Donate = () => {
                   <div className="flex items-start gap-4">
                     <Users className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Community Development</h3>
+                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Tree Plantations</h3>
                       <p className="font-inter text-foreground/80 text-sm leading-relaxed">
-                        Infrastructure projects, clean water initiatives, and sustainable development programs that create lasting positive change.
+                        From campuses to local parks, we conduct plantation drives that promote sustainability and community engagement.
                       </p>
                     </div>
                   </div>
@@ -66,9 +66,9 @@ const Donate = () => {
                   <div className="flex items-start gap-4">
                     <Zap className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Emergency Relief</h3>
+                      <h3 className="font-inter text-lg font-bold text-primary mb-2">Trek-Based Campaigns</h3>
                       <p className="font-inter text-foreground/80 text-sm leading-relaxed">
-                        Rapid response for natural disasters, providing food, shelter, and medical aid to families in crisis situations.
+                        We combine our love for adventure with purpose—organizing treks that raise awareness for social and environmental causes.
                       </p>
                     </div>
                   </div>
@@ -84,23 +84,8 @@ const Donate = () => {
                     SUPPORT SOCIAL CHANGE
                   </h2>
                   <p className="font-inter text-foreground/80 leading-relaxed">
-                    Secure donation through trusted platforms. Your contribution is tax-deductible and goes directly to community welfare projects.
+                    Your donation helps us keep these projects alive. All funds go directly towards local events, materials, and outreach efforts led by students.
                   </p>
-                </div>
-
-                {/* Donation Amount Options */}
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {[
-                    { amount: "₹500", label: "Basic Support" },
-                    { amount: "₹1,000", label: "Supporter" },
-                    { amount: "₹2,500", label: "Advocate" },
-                    { amount: "₹5,000", label: "Champion" }
-                  ].map(({ amount, label }, idx) => (
-                    <div key={idx} className="border border-primary/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
-                      <div className="font-inter text-xl font-bold text-primary">{amount}</div>
-                      <div className="font-inter text-xs text-foreground/70">{label}</div>
-                    </div>
-                  ))}
                 </div>
 
                 {/* Ketto Donation Button */}
@@ -114,28 +99,14 @@ const Donate = () => {
                   <ExternalLink className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </a>
 
-                {/* Security Features */}
-                <div className="border-t border-border pt-6">
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <Shield className="w-5 h-5 text-primary" />
-                    <span className="font-inter text-primary font-medium">SECURE & TRUSTED</span>
-                  </div>
-                  <div className="space-y-2 text-xs font-inter text-foreground/70 text-center">
-                    <p>• SSL encrypted transactions</p>
-                    <p>• Tax-deductible under 80G</p>
-                    <p>• Transparent fund utilization</p>
-                    <p>• Regular impact reports</p>
-                  </div>
-                </div>
-
                 {/* Alternative Support Methods */}
                 <div className="border-t border-border pt-6 mt-6">
                   <h4 className="font-inter text-primary mb-3 text-center font-medium">OTHER WAYS TO SUPPORT</h4>
                   <div className="space-y-2 text-sm font-inter text-foreground/80">
-                    <p>• <strong>Volunteer:</strong> Join our events and projects</p>
-                    <p>• <strong>Partner:</strong> Corporate sponsorship opportunities</p>
-                    <p>• <strong>Share:</strong> Spread awareness about our mission</p>
-                    <p>• <strong>Connect:</strong> Follow us on social media</p>
+                    <p>• <strong>Volunteer:</strong> Join our teaching sessions and cleanup drives</p>
+                    <p>• <strong>Partner:</strong> Collaborate with us on campus or community projects</p>
+                    <p>• <strong>Share:</strong> Help spread our mission on social media</p>
+                    <p>• <strong>Connect:</strong> Reach out with ideas and support</p>
                   </div>
                 </div>
               </div>
@@ -149,8 +120,7 @@ const Donate = () => {
                 HAVE QUESTIONS?
               </h3>
               <p className="font-inter text-foreground/80 mb-6">
-                Want to learn more about how your donation will be used? 
-                Contact our finance team for detailed information and impact reports.
+                Want to know more about how we use funds or how you can get involved? Feel free to reach out—we’d love to hear from you!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
