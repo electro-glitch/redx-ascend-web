@@ -19,11 +19,7 @@ const Hero = () => {
             />
           </div>
 
-          {/* Hero headline */}
-          <h1 className="font-orbitron text-5xl md:text-7xl font-black mb-6 heading-adventure">
-            REDX
-          </h1>
-          
+          {/* Hero tagline */}
           <p className="font-bebas text-2xl md:text-3xl text-accent mb-4 tracking-wider">
             ADVENTURE • SOCIAL SERVICE • LEGACY
           </p>
