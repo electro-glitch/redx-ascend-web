@@ -75,30 +75,7 @@ const Donate = () => {
                 </div>
               </div>
 
-              {/* Impact Statistics */}
-              <div className="mt-12">
-                <h3 className="font-inter text-2xl text-primary mb-6 font-bold tracking-wider">OUR SOCIAL IMPACT</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="adventure-card text-center">
-                    <div className="font-inter text-3xl font-bold text-primary mb-2">1200+</div>
-                    <div className="font-inter text-sm text-foreground/80">Children Educated</div>
-                  </div>
-                  <div className="adventure-card text-center">
-                    <div className="font-inter text-3xl font-bold text-primary mb-2">25+</div>
-                    <div className="font-inter text-sm text-foreground/80">Communities Served</div>
-                  </div>
-                  <div className="adventure-card text-center">
-                    <div className="font-inter text-3xl font-bold text-primary mb-2">8</div>
-                    <div className="font-inter text-sm text-foreground/80">Schools Built</div>
-                  </div>
-                  <div className="adventure-card text-center">
-                    <div className="font-inter text-3xl font-bold text-primary mb-2">₹12L+</div>
-                    <div className="font-inter text-sm text-foreground/80">Social Impact Fund</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+              
             {/* Right Column - Donation Portal */}
             <div>
               <div className="adventure-card sticky top-24">
