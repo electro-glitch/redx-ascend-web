@@ -161,7 +161,7 @@ const Partners = () => {
                 Join our network of socially conscious businesses. Partner with RedX to support community initiatives while growing your business.
               </p>
               <a 
-                href="mailto:partnerships@redx.club" 
+                href="mailto:	redx.mit@manipal.edu" 
                 className="btn-outline-adventure"
               >
                 Contact Partnership Team
