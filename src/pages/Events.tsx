@@ -107,6 +107,44 @@ const Events = () => {
     </div>
   );
 
+  const DishaSliderCard = () => (
+    <div className="bg-black border border-border rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] hover:border-red-500">
+      <div className="flex flex-col p-6">
+        <div className="flex items-center gap-2 text-accent mb-3">
+          <Heart className="w-5 h-5" />
+          <span className="font-inter text-sm font-medium tracking-wider">DISHA</span>
+        </div>
+
+        <h3 className="font-inter text-xl font-bold text-red-500 mb-2">
+          {dishaEvents[dishaIndex].title}
+        </h3>
+
+        <p className="font-inter text-foreground/90 leading-relaxed mb-4 text-sm">
+          {dishaEvents[dishaIndex].description}
+        </p>
+
+        <div className="text-xs text-muted-foreground">
+          Location: {dishaEvents[dishaIndex].location}
+        </div>
+
+        <div className="flex justify-between mt-6">
+          <button
+            onClick={() => setDishaIndex((dishaIndex - 1 + dishaEvents.length) % dishaEvents.length)}
+            className="btn-outline-adventure px-4"
+          >
+            ← Prev
+          </button>
+          <button
+            onClick={() => setDishaIndex((dishaIndex + 1) % dishaEvents.length)}
+            className="btn-outline-adventure px-4"
+          >
+            Next →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -142,29 +180,11 @@ const Events = () => {
             ))}
           </div>
 
-          {/* DISHA Events - Slider */}
+          {/* DISHA Events - Full Card Slider */}
           <div className="mb-20 text-center">
             <h2 className="font-inter text-3xl font-bold text-accent mb-6 tracking-widest">DISHA INITIATIVES</h2>
-            <div className="relative max-w-3xl mx-auto">
-              <div className="bg-black border border-border p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-accent mb-2">{dishaEvents[dishaIndex].title}</h3>
-                <p className="text-sm text-foreground/80 mb-2">{dishaEvents[dishaIndex].description}</p>
-                <p className="text-xs text-muted-foreground">Location: {dishaEvents[dishaIndex].location}</p>
-              </div>
-              <div className="flex justify-between mt-4">
-                <button
-                  onClick={() => setDishaIndex((dishaIndex - 1 + dishaEvents.length) % dishaEvents.length)}
-                  className="btn-outline-adventure px-4"
-                >
-                  ← Prev
-                </button>
-                <button
-                  onClick={() => setDishaIndex((dishaIndex + 1) % dishaEvents.length)}
-                  className="btn-outline-adventure px-4"
-                >
-                  Next →
-                </button>
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <DishaSliderCard />
             </div>
           </div>
 
