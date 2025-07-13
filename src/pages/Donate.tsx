@@ -37,6 +37,7 @@ const Donate = () => {
                     </div>
                   </div>
                 </div>
+                </div>
 
                 <div className="adventure-card">
                   <div className="flex items-start gap-4">
